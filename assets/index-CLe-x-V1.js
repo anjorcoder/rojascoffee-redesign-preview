@@ -54,19 +54,23 @@
         <h2>Our Signature Coffee Collection</h2>
         <p>Explore single origins, experiences and business solutions crafted for every taste.</p>
       </div>
-      <div class="product-grid">
-        ${t.map(e=>`
-          <article class="product-card">
-            <a href="${e.url}" aria-label="Bekijk ${e.title}">
-              <div class="rating">★ ${e.rating}</div>
-              <div class="product-img"><img src="${e.image}" alt="${e.title}" /></div>
-              <h3>${e.title}</h3>
-              <strong>${e.price}</strong>
-              <p>${e.roast}</p>
-              <ul>${e.notes.map(e=>`<li>${e}</li>`).join(``)}</ul>
-            </a>
-          </article>
-        `).join(``)}
+      <div class="gallery-wrap">
+        <button class="gallery-btn prev" type="button" aria-label="Vorige producten">‹</button>
+        <div class="product-gallery" aria-label="Horizontale productgalerij">
+          ${t.map(e=>`
+            <article class="product-card">
+              <a href="${e.url}" aria-label="Bekijk ${e.title}">
+                <div class="rating">★ ${e.rating}</div>
+                <div class="product-img"><img src="${e.image}" alt="${e.title}" /></div>
+                <h3>${e.title}</h3>
+                <strong>${e.price}</strong>
+                <p>${e.roast}</p>
+                <ul>${e.notes.map(e=>`<li>${e}</li>`).join(``)}</ul>
+              </a>
+            </article>
+          `).join(``)}
+        </div>
+        <button class="gallery-btn next" type="button" aria-label="Volgende producten">›</button>
       </div>
       <a class="wide-cta" href="https://rojascoffee.com/shop/">Shop All Coffee</a>
     </section>
@@ -125,4 +129,4 @@
       <a href="https://rojascoffee.com/shop/">Shop coffee →</a>
     </div>
   </footer>
-`;var i=document.querySelectorAll(`.hero-copy, .hero-product-panel, .why h2, .benefit-grid article, .section-title, .product-card, .subscription-copy, .pour-image, .kettle-row img, .subscription-note, .quality-image, .quality-copy, .testimonial, .footer > div`);i.forEach((e,t)=>{e.classList.add(`reveal`),e.style.setProperty(`--reveal-delay`,`${Math.min(t%6,5)*70}ms`)});var a=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add(`is-visible`)})},{threshold:.12,rootMargin:`0px 0px -8% 0px`});i.forEach(e=>a.observe(e));var o=document.querySelector(`.hero-title`),s=document.querySelector(`.cup-shot`);window.addEventListener(`scroll`,()=>{let e=window.scrollY;o&&(o.style.transform=`translateY(${Math.min(e*.08,28)}px)`),s&&(s.style.transform=`translateY(${Math.min(e*-.05,0)}px)`)},{passive:!0});
+`;var i=document.querySelectorAll(`.hero-copy, .hero-product-panel, .why h2, .benefit-grid article, .section-title, .product-card, .subscription-copy, .pour-image, .kettle-row img, .subscription-note, .quality-image, .quality-copy, .testimonial, .footer > div`);i.forEach((e,t)=>{e.classList.add(`reveal`),e.style.setProperty(`--reveal-delay`,`${Math.min(t%6,5)*70}ms`)});var a=document.querySelector(`.product-gallery`);document.querySelector(`.gallery-btn.prev`)?.addEventListener(`click`,()=>{a?.scrollBy({left:-340,behavior:`smooth`})}),document.querySelector(`.gallery-btn.next`)?.addEventListener(`click`,()=>{a?.scrollBy({left:340,behavior:`smooth`})});var o=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add(`is-visible`)})},{threshold:.12,rootMargin:`0px 0px -8% 0px`});i.forEach(e=>o.observe(e));var s=document.querySelector(`.hero-title`),c=document.querySelector(`.cup-shot`);window.addEventListener(`scroll`,()=>{let e=window.scrollY;s&&(s.style.transform=`translateY(${Math.min(e*.08,28)}px)`),c&&(c.style.transform=`translateY(${Math.min(e*-.05,0)}px)`)},{passive:!0});
