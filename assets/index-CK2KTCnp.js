@@ -14,13 +14,8 @@
   <main id="top">
     <section class="hero-reference">
       <div class="hero-title" aria-hidden="true">LUXURY COFFEE</div>
-      <div class="tilted-pack">
-        <div class="pack-card">
-          <img src="${e}26-Finca-San-Isidro-VK.jpg" alt="Rojas San Isidro koffiebonen" />
-        </div>
-      </div>
-      <div class="cup-shot"><img src="${e}03-parallax-img.jpg" alt="Verse espresso" /></div>
       <div class="hero-copy">
+        <p class="eyebrow">Direct trade · Colombian specialty</p>
         <h1>Exceptional Coffee, Crafted for Everyday Luxury</h1>
         <p>Ethically sourced, small-batch roasted specialty coffee delivered fresh to your door — direct from the Rojas family farms.</p>
         <div class="actions">
@@ -28,6 +23,17 @@
           <a class="btn outline" href="#subscription">Start Subscription</a>
         </div>
       </div>
+      <div class="hero-product-panel">
+        <div class="pack-card">
+          <img src="${e}26-Finca-San-Isidro-VK.jpg" alt="Rojas San Isidro koffiebonen" />
+        </div>
+        <div class="hero-mini-card">
+          <span>86+ SCA</span>
+          <strong>San Isidro</strong>
+          <small>Chocolate · caramel · yellow fruit</small>
+        </div>
+      </div>
+      <div class="cup-shot"><img src="${e}03-parallax-img.jpg" alt="Verse espresso" /></div>
     </section>
 
     <section id="why" class="why section-shell">
