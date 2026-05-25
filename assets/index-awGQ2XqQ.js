@@ -102,8 +102,27 @@
   </main>
 
   <footer id="contact" class="footer">
-    <strong>Rojas Specialty Coffee</strong>
-    <span>Luttekestraat 25, Zwolle</span>
-    <a href="tel:+31612726466">(+31) 6 12726466</a>
+    <div class="footer-brand">
+      <a class="logo" href="#top">Rojasify<span>◎</span></a>
+      <p>Direct-trade specialty coffee van familie-finca’s in Colombia naar Zwolle, horeca en thuisbarista’s.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <a href="#shop">Signature collection</a>
+      <a href="#subscription">Subscription</a>
+      <a href="#brew">Quality</a>
+    </div>
+    <div>
+      <h3>Rojas</h3>
+      <a href="https://rojascoffee.com/our-story/">Our story</a>
+      <a href="https://rojascoffee.com/bezoek-de-koffie-plantage/">Visit the farm</a>
+      <a href="https://rojascoffee.com/contact/">Wholesale</a>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <span>Luttekestraat 25, Zwolle</span>
+      <a href="tel:+31612726466">(+31) 6 12726466</a>
+      <a href="https://rojascoffee.com/shop/">Shop coffee →</a>
+    </div>
   </footer>
-`;
+`;var i=document.querySelectorAll(`.hero-copy, .hero-product-panel, .why h2, .benefit-grid article, .section-title, .product-card, .subscription-copy, .pour-image, .kettle-row img, .subscription-note, .quality-image, .quality-copy, .testimonial, .footer > div`);i.forEach((e,t)=>{e.classList.add(`reveal`),e.style.setProperty(`--reveal-delay`,`${Math.min(t%6,5)*70}ms`)});var a=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add(`is-visible`)})},{threshold:.12,rootMargin:`0px 0px -8% 0px`});i.forEach(e=>a.observe(e));var o=document.querySelector(`.hero-title`),s=document.querySelector(`.cup-shot`);window.addEventListener(`scroll`,()=>{let e=window.scrollY;o&&(o.style.transform=`translateY(${Math.min(e*.08,28)}px)`),s&&(s.style.transform=`translateY(${Math.min(e*-.05,0)}px)`)},{passive:!0});
